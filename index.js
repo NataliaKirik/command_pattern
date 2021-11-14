@@ -58,7 +58,7 @@ class SubtractCommand {
     }
 }
 
-class AddThenMultiplyCommand {
+class AddThenSubtractCommand {
     constructor(valueToAdd, valueToSubtract) {
         this.addCommand = new AddCommand(valueToAdd)
         this.subtractCommand = new SubtractCommand(valueToSubtract)
@@ -76,7 +76,7 @@ class AddThenMultiplyCommand {
 }
 
 const calculator = new Calculator()
-calculator.executeCommand(new AddThenMultiplyCommand(10, 2))
+calculator.executeCommand(new AddThenSubtractCommand(10, 2))
 console.log(calculator.value);
 calculator.undo()
 console.log(calculator.value);
